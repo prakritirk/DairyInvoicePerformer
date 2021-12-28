@@ -1,0 +1,707 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1279,1273" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="376,1108" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="strEmailSubject" />
+      <Variable x:TypeArguments="x:String" Name="strEmailBody" />
+      <Variable x:TypeArguments="x:String" Default="\\bluebunny.com\testapp2\Robots\Dairy_Invoice_Processing\Exception_Screenshots\ExceptionScreenshot_2021-02-22 18_47_05_6651.png" Name="strScreenshotpath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'text  Asset Number'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="12345">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8c98519ee8ddb3f6ad12b611809f52a4" Selector="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - TEST2/TESTAPP2 6/18/2020 1:00AM' /&gt;&lt;java name='Define Asset Number (889)' role='internal frame' /&gt;&lt;java name='Asset Number' role='text' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="480,143" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button  Find ALT F'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8840242f6832301210058c0ffeada541" Selector="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - TEST2/TESTAPP2 6/18/2020 1:00AM' /&gt;&lt;java name='Navigator - WELLS ROBOT - EAM' role='internal frame' /&gt;&lt;java name='Organizations' role='internal frame' /&gt;&lt;java name='Find ALT F' role='push button' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;SE&quot;]" TopMost="True" />
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;continue process&quot;]" TopMost="True">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MessageBox>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Flowchart sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                <av:Size x:Key="ShapeSize">60,75</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,77.5 290,77.5 290,104.5</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart.StartNode>
+              <x:Reference>__ReferenceID0</x:Reference>
+            </Flowchart.StartNode>
+            <FlowStep x:Name="__ReferenceID0">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">190,104.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">290,155.5 290,245.5 560,245.5 560,134.5 440,134.5 440,164.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'label +'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" SimulateType="False" Text="889">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ad88b7578c4828daabd9dd70b314aa3f" Selector="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - TEST2/TESTAPP2 6/18/2020 1:00AM' /&gt;&lt;java name='Navigator - WELLS ROBOT - EAM' role='internal frame' /&gt;&lt;java name='Organizations' role='internal frame' /&gt;&lt;java name=' Find' role='text' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:TypeInto>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">340,164.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">440,215.5 440,245.5 290,245.5 290,266.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Find ALT F'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8840242f6832301210058c0ffeada541" Selector="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - TEST2/TESTAPP2 6/18/2020 1:00AM' /&gt;&lt;java name='Navigator - WELLS ROBOT - EAM' role='internal frame' /&gt;&lt;java name='Organizations' role='internal frame' /&gt;&lt;java name='Find ALT F' role='push button' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:Click.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:Click>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID1" Condition="[5&gt;1]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">250.5,266.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">250.5,310 100,310 100,225.02</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">0,174.02</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">100,174.02 100,130 190,130</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='jp2launcher.exe' cls='SunAwtFrame' title='Oracle Applications - TEST2/TESTAPP2 6/18/2020 1:00AM' /&gt;&#xA;&lt;java name='Navigator - WELLS ROBOT - EAM' role='internal frame' /&gt;&#xA;&lt;java name='Functions' role='page tab' /&gt;&#xA;&lt;java name='Function List' role='list' /&gt;&#xA;&lt;java name='    Change Orgs' role='label' /&gt;&#xA;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Click>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+            <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID3</x:Reference>
+          </Flowchart>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="426,249" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MoveFile ContinueOnError="{x:Null}" Destination="[&quot;\\bluebunny.com\testapp2\Robots\Dairy_Invoice_Processing\To_Process&quot;+&quot;\&quot;+&quot;12-1-22714&quot;+&quot;.pdf&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="\\bluebunny.com\testapp2\Robots\Dairy_Invoice_Processing\Processed\12-1-22714.pdf">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:MoveFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Assign : Mail Subject" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="ui:GenericValue">[strEmailSubject]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="ui:GenericValue">[Environment.MachineName + " :: Error during BOT execution of " + "Dairy Invoice Creation Process"]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,156" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Assign : Mail Body" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strEmailBody]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;span style=font-size:11pt;font-family:Calibri&gt;Hi,&lt;p&gt;"+ 
+"&lt;BR&gt;&lt;br&gt;"+
+"&lt;p&gt;&lt;p&gt;"+
+"Note: This Is a BOT generated email. Please Do Not reply."]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendExchangeMail Bcc="{x:Null}" Cc="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[strEmailBody]" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendExchangeMail_1" IsBodyHtml="True" IsDraft="False" Password="M@y@M@y@lu5117" SaveCopy="False" Server="https://outlook.office365.com" Subject="[strEmailSubject]" To="prajbhanda@bluebunny.com" User="prajbhanda@bluebunny.com">
+            <ui:SendExchangeMail.Files>
+              <InArgument x:TypeArguments="x:String">[strScreenshotpath]</InArgument>
+            </ui:SendExchangeMail.Files>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:SendExchangeMail>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,143" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="6Uv+z0fDBCOxVqgYkpS7jJvjLy74kSt9uPZNcYJLChr33I1YH26pXr7+ky8iADiNMqVijbpDjInk/Sk4QMUbtQ==" DisplayName="CV Screen Scope 'PARMENU.EXE Settling/Ag...'" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
+            <p:CVScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CloseButton (376,1,34,22)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - CloseButton" sap:VirtualizedContainerService.HintSize="400,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="8f6a1506ae70522e6043294a5856bc11" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor DesignTimeArea="376, 1, 34, 22" ElementType="CloseButton" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </ActivityAction>
+            </p:CVScope.Body>
+            <p:CVScope.DesignTimeCache>
+              <uc:CVCache InformativeScreenshot="b8e8bfaa4c8c870608a84f32859f56a4" LogicalPosition="1937, -19" OcrText="Settling/Agreements (Load 217918 Agreement 44982)&#xA;Source&#xA;Shipped&#xA;Percents:&#xA;SOL&#xA;Counts: 738523&#xA;2/4/2021&#xA;Producer West Point&#xA;Sweet Cream Buttermilk&#xA;Bill Of Lading 22781&#xA;Source&#xA;48,820&#xA;_ . oe no Destination&#xA;Received&#xA;48,820&#xA;1 77500 781&#xA;738523&#xA;2/4/2021&#xA;Agreed Mix&#xA;Sweet Cream Buttermilk&#xA;po Number&#xA;Existing Contract Info Destination&#xA;48,820&#xA;2 32000&#xA;33 55000 Contract&#xA;Contracted Freight&#xA;Cont Sequence&#xA;Pricing Market&#xA;Market Description&#xA;Market Price&#xA;Market Multiplier&#xA;Price Rate&#xA;Amount&#xA;Price Comp Code&#xA;Message Log 1 728&#xA;0110&#xA;Weekly Average Central B&#xA;1118500&#xA;0110&#xA;0500&#xA;0110&#xA;SOL&#xA;0110&#xA;L cg Clear" Position="1937, -19" ScaleFactor="1" ScreenshotGuid="b60420ed-509b-47a4-8ba1-5973c42fb467" ServerVersion="1">
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="151, 193, 71, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="650, 202, 80, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="54, 29, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="54, 193, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="151, 217, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="246, 193, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="54, 142, 70, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="454, 29, 82, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 321, 79, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="55, 54, 79, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="150, 142, 70, 20" Score="1" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="711, 203, 19, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="346, 193, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 177, 79, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 370, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 273, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="246, 217, 72, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="55, 218, 70, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="600, 77, 196, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 225, 79, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="455, 53, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 346, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 297, 80, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 407, 107, 20" Score="1" />
+                    <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="29, 431, 22, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="55, 77, 80, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 154, 78, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="454, 77, 80, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="245, 142, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="446, 141, 70, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="446, 193, 70, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="209, 78, 91, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="346, 142, 70, 19" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="346, 217, 71, 20" Score="1" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="32, 573, 20, 19" Score="1" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="763, 1, 35, 22" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="447, 217, 70, 20" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="651, 249, 135, 21" Score="1" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="29, 482, 759, 90" Score="1" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="53, 29, 81, 21" Score="1" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="763, 0, 36, 21" Score="1" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="651, 249, 136, 21" Score="1" />
+                    <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="28, 431, 20, 20" Score="1" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="346, 142, 70, 20" Score="1" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="35, 576, 10, 12" Score="1" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="128">
+                    <uc:OcrTextInfo Region="220, 8, 136, 14" Text="Settling/Agreements" />
+                    <uc:OcrTextInfo Region="361, 8, 36, 13" Text="(Load" />
+                    <uc:OcrTextInfo Region="403, 8, 47, 11" Text="217918" />
+                    <uc:OcrTextInfo Region="458, 8, 74, 14" Text="Agreement" />
+                    <uc:OcrTextInfo Region="536, 8, 44, 13" Text="44982)" />
+                    <uc:OcrTextInfo Region="10, 33, 33, 9" Text="Source" />
+                    <uc:OcrTextInfo Region="10, 81, 38, 11" Text="Shipped" />
+                    <uc:OcrTextInfo Region="6, 173, 43, 9" Text="Percents:" />
+                    <uc:OcrTextInfo Region="15, 223, 20, 9" Text="SOL" />
+                    <uc:OcrTextInfo Region="6, 413, 34, 9" Text="Counts:" />
+                    <uc:OcrTextInfo Region="61, 59, 35, 9" Text="738523" />
+                    <uc:OcrTextInfo Region="61, 83, 43, 9" Text="2/4/2021" />
+                    <uc:OcrTextInfo Region="60, 121, 42, 9" Text="Producer" />
+                    <uc:OcrTextInfo Region="142, 37, 25, 9" Text="West" />
+                    <uc:OcrTextInfo Region="171, 37, 23, 9" Text="Point" />
+                    <uc:OcrTextInfo Region="143, 61, 29, 9" Text="Sweet" />
+                    <uc:OcrTextInfo Region="176, 61, 29, 9" Text="Cream" />
+                    <uc:OcrTextInfo Region="209, 61, 45, 9" Text="Buttermilk" />
+                    <uc:OcrTextInfo Region="140, 81, 12, 9" Text="Bill" />
+                    <uc:OcrTextInfo Region="156, 81, 10, 9" Text="Of" />
+                    <uc:OcrTextInfo Region="170, 81, 31, 11" Text="Lading" />
+                    <uc:OcrTextInfo Region="215, 83, 27, 9" Text="22781" />
+                    <uc:OcrTextInfo Region="156, 121, 33, 9" Text="Source" />
+                    <uc:OcrTextInfo Region="184, 147, 32, 10" Text="48,820" />
+                    <uc:OcrTextInfo Region="174, 486, 2, 1" Text="_" />
+                    <uc:OcrTextInfo Region="183, 484, 2, 3" Text="." />
+                    <uc:OcrTextInfo Region="192, 481, 11, 6" Text="oe" />
+                    <uc:OcrTextInfo Region="212, 481, 11, 6" Text="no" />
+                    <uc:OcrTextInfo Region="400, 33, 52, 9" Text="Destination" />
+                    <uc:OcrTextInfo Region="400, 81, 45, 9" Text="Received" />
+                    <uc:OcrTextInfo Region="380, 147, 32, 10" Text="48,820" />
+                    <uc:OcrTextInfo Region="370, 223, 3, 9" Text="1" />
+                    <uc:OcrTextInfo Region="385, 223, 29, 9" Text="77500" />
+                    <uc:OcrTextInfo Region="461, 35, 15, 9" Text="781" />
+                    <uc:OcrTextInfo Region="461, 59, 35, 9" Text="738523" />
+                    <uc:OcrTextInfo Region="461, 83, 43, 9" Text="2/4/2021" />
+                    <uc:OcrTextInfo Region="453, 121, 34, 11" Text="Agreed" />
+                    <uc:OcrTextInfo Region="570, 37, 15, 9" Text="Mix" />
+                    <uc:OcrTextInfo Region="543, 61, 29, 9" Text="Sweet" />
+                    <uc:OcrTextInfo Region="576, 61, 29, 9" Text="Cream" />
+                    <uc:OcrTextInfo Region="609, 61, 45, 9" Text="Buttermilk" />
+                    <uc:OcrTextInfo Region="540, 81, 13, 9" Text="po" />
+                    <uc:OcrTextInfo Region="558, 81, 36, 9" Text="Number" />
+                    <uc:OcrTextInfo Region="560, 133, 35, 11" Text="Existing" />
+                    <uc:OcrTextInfo Region="599, 133, 39, 9" Text="Contract" />
+                    <uc:OcrTextInfo Region="642, 133, 17, 9" Text="Info" />
+                    <uc:OcrTextInfo Region="254, 121, 52, 9" Text="Destination" />
+                    <uc:OcrTextInfo Region="280, 147, 32, 10" Text="48,820" />
+                    <uc:OcrTextInfo Region="276, 199, 7, 9" Text="2" />
+                    <uc:OcrTextInfo Region="285, 199, 29, 9" Text="32000" />
+                    <uc:OcrTextInfo Region="270, 223, 13, 9" Text="33" />
+                    <uc:OcrTextInfo Region="285, 223, 29, 9" Text="55000" />
+                    <uc:OcrTextInfo Region="552, 157, 39, 9" Text="Contract" />
+                    <uc:OcrTextInfo Region="552, 181, 51, 9" Text="Contracted" />
+                    <uc:OcrTextInfo Region="607, 181, 31, 11" Text="Freight" />
+                    <uc:OcrTextInfo Region="552, 205, 21, 9" Text="Cont" />
+                    <uc:OcrTextInfo Region="577, 205, 48, 11" Text="Sequence" />
+                    <uc:OcrTextInfo Region="552, 229, 31, 11" Text="Pricing" />
+                    <uc:OcrTextInfo Region="587, 229, 32, 9" Text="Market" />
+                    <uc:OcrTextInfo Region="552, 253, 32, 9" Text="Market" />
+                    <uc:OcrTextInfo Region="588, 253, 52, 11" Text="Description" />
+                    <uc:OcrTextInfo Region="552, 277, 32, 9" Text="Market" />
+                    <uc:OcrTextInfo Region="588, 277, 23, 9" Text="Price" />
+                    <uc:OcrTextInfo Region="552, 301, 32, 9" Text="Market" />
+                    <uc:OcrTextInfo Region="588, 301, 40, 11" Text="Multiplier" />
+                    <uc:OcrTextInfo Region="552, 325, 23, 9" Text="Price" />
+                    <uc:OcrTextInfo Region="579, 325, 22, 9" Text="Rate" />
+                    <uc:OcrTextInfo Region="551, 349, 36, 9" Text="Amount" />
+                    <uc:OcrTextInfo Region="552, 373, 23, 9" Text="Price" />
+                    <uc:OcrTextInfo Region="579, 373, 26, 11" Text="Comp" />
+                    <uc:OcrTextInfo Region="609, 373, 24, 9" Text="Code" />
+                    <uc:OcrTextInfo Region="476, 437, 56, 14" Text="Message" />
+                    <uc:OcrTextInfo Region="538, 437, 23, 14" Text="Log" />
+                    <uc:OcrTextInfo Region="657, 159, 3, 9" Text="1" />
+                    <uc:OcrTextInfo Region="663, 159, 17, 9" Text="728" />
+                    <uc:OcrTextInfo Region="657, 183, 20, 9" Text="0110" />
+                    <uc:OcrTextInfo Region="656, 255, 36, 11" Text="Weekly" />
+                    <uc:OcrTextInfo Region="695, 255, 40, 11" Text="Average" />
+                    <uc:OcrTextInfo Region="739, 255, 32, 9" Text="Central" />
+                    <uc:OcrTextInfo Region="775, 255, 5, 9" Text="B" />
+                    <uc:OcrTextInfo Region="657, 279, 38, 9" Text="1118500" />
+                    <uc:OcrTextInfo Region="657, 303, 20, 9" Text="0110" />
+                    <uc:OcrTextInfo Region="669, 327, 23, 9" Text="0500" />
+                    <uc:OcrTextInfo Region="657, 351, 20, 9" Text="0110" />
+                    <uc:OcrTextInfo Region="657, 375, 20, 9" Text="SOL" />
+                    <uc:OcrTextInfo Region="657, 413, 20, 9" Text="0110" />
+                    <uc:OcrTextInfo Region="39, 459, 4, 9" Text="L" />
+                    <uc:OcrTextInfo Region="45, 462, 12, 9" Text="cg" />
+                    <uc:OcrTextInfo Region="73, 459, 26, 9" Text="Clear" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </p:CVScope.DesignTimeCache>
+            <p:CVScope.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" />
+              </ActivityFunc>
+            </p:CVScope.OCREngine>
+            <p:CVScope.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="04e0126f9e87b10c44a620c300b7173c" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='TWV101DSI - Remote Desktop Connection' /&gt;&lt;wnd app='parmenu.exe' cls='#32770' title='Settling/Agreements (Load 217918  Agreement 44982)' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </p:CVScope.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:CVScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd1:DataTable" Name="dtOIM" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:BuildDataTable DataTable="[dtOIM]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Doctype&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;File_x0020_Path&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vendor_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vendor_x0020_Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Reference_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PO_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Check_x0020_Number&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Check_x0020_Date&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;ACCOUNTS PAYABLE&quot;,&quot;INVOICE&quot;,&quot;\\bluebunny\appsdev\MARKVIEW\images\KOFAX_AP_DINV473886_20210303.pdf&quot;,&quot;38494&quot;,&quot;&quot;,&quot;94327&quot;,&quot;03-MAR-2021&quot;,&quot;&quot;,&quot;473886&quot;,&quot;&quot;,&quot;&quot;}]" DataTable="[dtOIM]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:WriteCsvFile AddHeaders="False" DataTable="[dtOIM]" Delimitator="Tab" DisplayName="Write CSV" Encoding="us-ascii" FilePath="AP-TEST-DINV030421-v4.oim" sap:VirtualizedContainerService.HintSize="334,152" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CloseApplication DisplayName="Close Application 'UiPath.Assistant.exe Ui...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9cedc268ec7139ee5244e98e7bca4379" Selector="&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:CloseApplication.Target>
+    </ui:CloseApplication>
+  </Sequence>
+</Activity>

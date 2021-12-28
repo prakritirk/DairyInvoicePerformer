@@ -1,0 +1,248 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1158,893" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Description: Here all working processes will be killed&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: N/A" DisplayName="Kill Processes" sap:VirtualizedContainerService.HintSize="755,828" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="uiPathAssistant" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="713,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Killing processes...&quot;]" />
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Activity to Kill Parmenu if open." DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,93" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence Kill Parmenu" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="6Uv+z0fDBCOxVqgYkpS7jJvjLy74kSt9uPZNcYJLChr33I1YH26pXr7+ky8iADiNMqVijbpDjInk/Sk4QMUbtQ==" DisplayName="CV Screen Scope Remote Window" sap:VirtualizedContainerService.HintSize="434,394" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="400,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="k" KeyModifiers="Alt, Ctrl">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache InformativeScreenshot="5b1292c41b8c26578a303213b1cdeebc" LogicalPosition="1920, -82" OcrText="*WVIOIDSI&#xA;DS' Application Menu&#xA;Liquid Procurement&#xA;Liquid Sales&#xA;Producer Payroll&#xA;Add Network&#xA;Printers&#xA;Loca[eMet...&#xA;Software&#xA;Gente&#xA;PatMenu - 1 Div: 11&#xA;Change Logged in user&#xA;Change Company/Division" Position="1920, -82" ScaleFactor="1" ScreenshotGuid="3adebb0a-926d-4136-b6ce-0a8ef0b466ef" ServerVersion="1">
+                  <uc:CVCache.CvUiElements>
+                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="10, 731, 54, 54" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="19, 842, 38, 47" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="35, 42, 18, 14" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="35, 57, 18, 14" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="13, 630, 43, 51" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="35, 73, 18, 14" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="15, 941, 41, 50" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="14, 16, 19, 19" Score="1" />
+                      <uc:CvElementInfo Category="MinimizeButton" Confidence="DesignTime" Region="395, 15, 21, 20" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="20, 60, 11, 11" Score="1" />
+                      <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="435, 15, 20, 21" Score="1" />
+                      <uc:CvElementInfo Category="MaximizeButton" Confidence="DesignTime" Region="414, 15, 20, 20" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="296, 354, 145, 24" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="20, 76, 11, 11" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="20, 44, 11, 12" Score="1" />
+                      <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="702, 2, 20, 20" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="725, 2, 21, 20" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="363, 322, 83, 23" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="296, 379, 145, 25" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="746, 2, 19, 19" Score="1" />
+                      <uc:CvElementInfo Category="MaximizeButton" Confidence="DesignTime" Region="1176, 2, 17, 18" Score="1" />
+                      <uc:CvElementInfo Category="MinimizeButton" Confidence="DesignTime" Region="1153, 5, 18, 18" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="288, 282, 157, 21" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="10, 528, 55, 48" Score="1" />
+                      <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1198, 3, 18, 17" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="768, 1, 21, 20" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="285, 258, 162, 22" Score="1" />
+                      <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="287, 219, 159, 21" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="287, 322, 76, 23" Score="1" />
+                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="287, 322, 75, 22" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1176, 2, 17, 19" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="3, 478, 9, 11" Score="1" />
+                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="287, 259, 160, 21" Score="1" />
+                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="286, 218, 159, 21" Score="1" />
+                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="10, 507, 11, 8" Score="1" />
+                    </scg:List>
+                  </uc:CVCache.CvUiElements>
+                  <uc:CVCache.OcrTexts>
+                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="32">
+                      <uc:OcrTextInfo Region="930, 8, 59, 9" Text="*WVIOIDSI" />
+                      <uc:OcrTextInfo Region="94, 20, 21, 11" Text="DS'" />
+                      <uc:OcrTextInfo Region="120, 20, 76, 14" Text="Application" />
+                      <uc:OcrTextInfo Region="202, 20, 35, 11" Text="Menu" />
+                      <uc:OcrTextInfo Region="59, 44, 27, 11" Text="Liquid" />
+                      <uc:OcrTextInfo Region="90, 44, 59, 9" Text="Procurement" />
+                      <uc:OcrTextInfo Region="59, 60, 27, 11" Text="Liquid" />
+                      <uc:OcrTextInfo Region="90, 60, 25, 9" Text="Sales" />
+                      <uc:OcrTextInfo Region="59, 76, 42, 9" Text="Producer" />
+                      <uc:OcrTextInfo Region="105, 76, 30, 11" Text="Payroll" />
+                      <uc:OcrTextInfo Region="3, 581, 22, 9" Text="Add" />
+                      <uc:OcrTextInfo Region="29, 581, 44, 9" Text="Network" />
+                      <uc:OcrTextInfo Region="19, 596, 39, 9" Text="Printers" />
+                      <uc:OcrTextInfo Region="6, 685, 63, 9" Text="Loca[eMet..." />
+                      <uc:OcrTextInfo Region="15, 789, 46, 9" Text="Software" />
+                      <uc:OcrTextInfo Region="21, 804, 30, 9" Text="Gente" />
+                      <uc:OcrTextInfo Region="15, 997, 47, 9" Text="PatMenu" />
+                      <uc:OcrTextInfo Region="243, 26, 4, 1" Text="-" />
+                      <uc:OcrTextInfo Region="284, 20, 4, 11" Text="1" />
+                      <uc:OcrTextInfo Region="295, 20, 23, 11" Text="Div:" />
+                      <uc:OcrTextInfo Region="325, 20, 10, 13" Text="11" />
+                      <uc:OcrTextInfo Region="314, 362, 36, 11" Text="Change" />
+                      <uc:OcrTextInfo Region="354, 362, 35, 11" Text="Logged" />
+                      <uc:OcrTextInfo Region="393, 362, 7, 9" Text="in" />
+                      <uc:OcrTextInfo Region="404, 362, 21, 9" Text="user" />
+                      <uc:OcrTextInfo Region="307, 386, 36, 11" Text="Change" />
+                      <uc:OcrTextInfo Region="347, 386, 85, 11" Text="Company/Division" />
+                    </scg:List>
+                  </uc:CVCache.OcrTexts>
+                </uc:CVCache>
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ebf29a7c0568e59d16ec62ef86b9ed5d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='*Remote Desktop Connection' /&gt;&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+            </p:CVScope>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:UiElementExists DisplayName="Element Exists UiPath Assistant" Exists="[uiPathAssistant]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="994e163dc08ee95afd3e68c85d3d7f55" Selector="&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;&lt;ctrl name='UiPath Assistant' role='pane' /&gt;&lt;ctrl idx='4' role='pane' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <If Condition="[uiPathAssistant]" DisplayName="If assistant open" sap:VirtualizedContainerService.HintSize="713,254" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:CloseApplication DisplayName="Close Application 'UiPath.Assistant.exe Ui...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+          <ui:CloseApplication.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9cedc268ec7139ee5244e98e7bca4379" Selector="&lt;wnd app='uipath.assistant.exe' cls='Chrome_WidgetWin_1' title='UiPath Assistant' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:CloseApplication.Target>
+        </ui:CloseApplication>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Assistant Window Not Open&quot;]" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

@@ -1,0 +1,551 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_to_DSI_Server__Updated" this:Login_to_DSI_Server__Updated.in_UserName="robottest@bluebunny.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_UserName" Type="InArgument(x:String)" />
+    <x:Property Name="in_UserPassword" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_CVAPI" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1135,4010</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Login_to_DSI_Server__Updated_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence Login to DSI Server" sap:VirtualizedContainerService.HintSize="1145,3905" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1103,3813" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="1065,3586" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1023,3494" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="981,3229" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Login_to_DSI_Server__Updated" sap:VirtualizedContainerService.HintSize="939,3137" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="897,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="mstsc" />
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="897,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="r" KeyModifiers="Win">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBetweenKeys="12" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="897,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="mstsc /admin[k(enter)]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ef1414ae293291a8378f75ed5ccc3e57" Selector="&lt;wnd app='explorer.exe' cls='#32770' title='Run' /&gt;&lt;wnd ctrlid='12298' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="897,2653" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Boolean" Name="ShowOptionsExists" />
+                        <Variable x:TypeArguments="ui:UiElement" Name="OkButton" />
+                        <Variable x:TypeArguments="x:String" Name="UserString" />
+                        <Variable x:TypeArguments="x:String" Default="ZnM2MFm4R!hP+a_*" Name="pwd" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:UiElementExists DisplayName="Element Exists 'push button'" Exists="[ShowOptionsExists]" sap:VirtualizedContainerService.HintSize="855,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e3c4154cbe2fa1f6bc319786434c2fdf" Selector="&lt;wnd idx='2' /&gt;&lt;ctrl name='Show Options ' role='push button' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Show Options Button" sap:VirtualizedContainerService.HintSize="855,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e3c4154cbe2fa1f6bc319786434c2fdf" Selector="&lt;wnd app='mstsc.exe' omit:cls='#32770' title='Remote Desktop Connection' /&gt;&lt;wnd ctrlid='5017' /&gt;&lt;ctrl name='Show Options ' role='push button' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'mstsc.exe Remote'" sap:VirtualizedContainerService.HintSize="855,1243" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="7bf27998686f3856c15c67e793d42a40" Selector="&lt;wnd app='mstsc.exe' omit:cls='#32770' title='Remote Desktop Connection' /&gt;">
+                        <ui:WindowScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1097" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Opened RDP Window&quot;]" />
+                              <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'combo box  Computer:'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_Config(&quot;DSI_ServerName&quot;).ToString]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c853fa7f48bbeb868cb4232f9bc27ff2" Selector="&lt;wnd cls='#32770' title='General' /&gt;&lt;wnd ctrlid='13050' /&gt;&lt;wnd ctrlid='13050' /&gt;&lt;ctrl name='Computer:' role='combo box' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:TypeInto.Target>
+                              </ui:TypeInto>
+                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[UserString]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["BLUEBUNNY\" + in_UserName.ToUpper.Replace("@BLUEBUNNY.COM","")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:SetValue ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Enter User Name" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[UserString]">
+                                <ui:SetValue.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="878ddb295fc1030a770d6c2a530e75a9" Selector="&lt;wnd cls='#32770' title='General' /&gt;&lt;wnd cls='#32770' title='Credentials' /&gt;&lt;wnd ctrlid='13064' /&gt;&lt;ctrl name='User name:' role='editable text' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SetValue.Target>
+                              </ui:SetValue>
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7c3c65b1622b53d91b78b08ca4c2f5f4" Selector="&lt;wnd ctrlid='1' title='Co&amp;amp;nnect' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                              <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'text  Password'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[new System.Net.NetworkCredential(string.Empty, in_UserPassword).Password]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b61c6ccc682e12e254d8da33a819486d" Selector="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;&lt;ctrl automationid='PasswordField_2' /&gt;&lt;ctrl name='Password' role='text' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:TypeInto.Target>
+                              </ui:TypeInto>
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a0348f7abf3769e396d0af314dbea03d" Selector="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;&lt;ctrl automationid='OkButton' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:WindowScope.Body>
+                      </ui:WindowScope>
+                      <Delay Duration="[new TimeSpan(0,0,1)]" sap:VirtualizedContainerService.HintSize="855,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <If Condition="[in_Config(&quot;DSI_ServerName&quot;).ToString.Contains(&quot;TWV&quot;) or in_Config(&quot;DSI_ServerName&quot;).ToString.Contains(&quot;PWV&quot;)]" sap:VirtualizedContainerService.HintSize="855,754" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="476,607" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Second access screen available&quot;]" />
+                            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ApiKey="[in_CVAPI]" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="434,384" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com/" Version="V1">
+                              <p:CVScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (669,490,91,33)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,106" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="cc74079f455a6ef9689911d0cf225d0b" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V1">
+                                      <p:CvClickWithDescriptor.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </p:CvClickWithDescriptor.CursorPosition>
+                                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                        <uc:CvDescriptor>
+                                          <uc:CvDescriptor.Target>
+                                            <uc:CvElementDescriptor DesignTimeArea="669, 490, 91, 33" ElementType="Button" />
+                                          </uc:CvDescriptor.Target>
+                                        </uc:CvDescriptor>
+                                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                      <p:CvClickWithDescriptor.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </p:CvClickWithDescriptor.Target>
+                                    </p:CvClickWithDescriptor>
+                                  </Sequence>
+                                </ActivityAction>
+                              </p:CVScope.Body>
+                              <p:CVScope.DesignTimeCache>
+                                <uc:CVCache InformativeScreenshot="bd1a859ca8076f492de852a956db606f" LogicalPosition="1920, -82" OcrText="Access subject to the Security Warning below:&#xA;This system is for Wells Enterprises Inc. authorized users only. All access and activity on this computer system are&#xA;subject to logging and review. Any unauthorized access or activity will be deemed an illegal act and will be&#xA;prosecuted to the fullest extent of the law. By clidcing OK you agree you have read and understand this warning&#xA;and the inherent liabilities. If you are uncertain about your status regarding access to this system please contact&#xA;a Wells Enterprises Inc Windows System Engineer.&#xA;II '&#xA;I.“ Windows Server 2012 R2" Position="1920, -82" ScaleFactor="1" ScreenshotGuid="720741b4-1cfc-4425-b2fb-375c7b7bf7ed" ServerVersion="1">
+                                  <uc:CVCache.CvUiElements>
+                                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="669, 490, 91, 33" Score="1" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="797, 998, 44, 37" Score="1" />
+                                    </scg:List>
+                                  </uc:CVCache.CvUiElements>
+                                  <uc:CVCache.OcrTexts>
+                                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="128">
+                                      <uc:OcrTextInfo Region="671, 375, 74, 19" Text="Access" />
+                                      <uc:OcrTextInfo Region="754, 374, 78, 26" Text="subject" />
+                                      <uc:OcrTextInfo Region="839, 376, 23, 18" Text="to" />
+                                      <uc:OcrTextInfo Region="870, 374, 35, 20" Text="the" />
+                                      <uc:OcrTextInfo Region="915, 375, 87, 25" Text="Security" />
+                                      <uc:OcrTextInfo Region="1010, 375, 92, 25" Text="Warning" />
+                                      <uc:OcrTextInfo Region="1113, 374, 70, 20" Text="below:" />
+                                      <uc:OcrTextInfo Region="670, 405, 21, 9" Text="This" />
+                                      <uc:OcrTextInfo Region="695, 406, 35, 11" Text="system" />
+                                      <uc:OcrTextInfo Region="735, 405, 7, 9" Text="is" />
+                                      <uc:OcrTextInfo Region="746, 405, 15, 9" Text="for" />
+                                      <uc:OcrTextInfo Region="764, 405, 28, 9" Text="Wells" />
+                                      <uc:OcrTextInfo Region="796, 405, 57, 12" Text="Enterprises" />
+                                      <uc:OcrTextInfo Region="858, 405, 16, 9" Text="Inc." />
+                                      <uc:OcrTextInfo Region="879, 405, 55, 9" Text="authorized" />
+                                      <uc:OcrTextInfo Region="939, 408, 26, 6" Text="users" />
+                                      <uc:OcrTextInfo Region="969, 405, 25, 12" Text="only." />
+                                      <uc:OcrTextInfo Region="997, 405, 13, 9" Text="All" />
+                                      <uc:OcrTextInfo Region="1014, 408, 34, 6" Text="access" />
+                                      <uc:OcrTextInfo Region="1051, 405, 19, 9" Text="and" />
+                                      <uc:OcrTextInfo Region="1075, 405, 37, 12" Text="activity" />
+                                      <uc:OcrTextInfo Region="1115, 408, 13, 6" Text="on" />
+                                      <uc:OcrTextInfo Region="1132, 405, 19, 9" Text="this" />
+                                      <uc:OcrTextInfo Region="1154, 406, 51, 11" Text="computer" />
+                                      <uc:OcrTextInfo Region="1209, 406, 36, 11" Text="system" />
+                                      <uc:OcrTextInfo Region="1249, 408, 16, 6" Text="are" />
+                                      <uc:OcrTextInfo Region="670, 421, 38, 12" Text="subject" />
+                                      <uc:OcrTextInfo Region="711, 422, 11, 8" Text="to" />
+                                      <uc:OcrTextInfo Region="726, 421, 40, 12" Text="logging" />
+                                      <uc:OcrTextInfo Region="770, 421, 19, 9" Text="and" />
+                                      <uc:OcrTextInfo Region="793, 421, 36, 9" Text="review." />
+                                      <uc:OcrTextInfo Region="833, 421, 20, 12" Text="Any" />
+                                      <uc:OcrTextInfo Region="857, 421, 69, 9" Text="unauthorized" />
+                                      <uc:OcrTextInfo Region="930, 424, 33, 6" Text="access" />
+                                      <uc:OcrTextInfo Region="967, 424, 11, 6" Text="or" />
+                                      <uc:OcrTextInfo Region="982, 421, 37, 12" Text="activity" />
+                                      <uc:OcrTextInfo Region="1022, 421, 16, 9" Text="will" />
+                                      <uc:OcrTextInfo Region="1043, 421, 13, 9" Text="be" />
+                                      <uc:OcrTextInfo Region="1059, 421, 43, 9" Text="deemed" />
+                                      <uc:OcrTextInfo Region="1106, 424, 12, 6" Text="an" />
+                                      <uc:OcrTextInfo Region="1122, 421, 30, 12" Text="illegal" />
+                                      <uc:OcrTextInfo Region="1156, 422, 16, 8" Text="act" />
+                                      <uc:OcrTextInfo Region="1175, 421, 19, 9" Text="and" />
+                                      <uc:OcrTextInfo Region="1198, 421, 17, 9" Text="will" />
+                                      <uc:OcrTextInfo Region="1220, 421, 12, 9" Text="be" />
+                                      <uc:OcrTextInfo Region="671, 437, 58, 12" Text="prosecuted" />
+                                      <uc:OcrTextInfo Region="733, 438, 11, 8" Text="to" />
+                                      <uc:OcrTextInfo Region="747, 437, 17, 9" Text="the" />
+                                      <uc:OcrTextInfo Region="767, 437, 32, 9" Text="fullest" />
+                                      <uc:OcrTextInfo Region="803, 438, 33, 8" Text="extent" />
+                                      <uc:OcrTextInfo Region="839, 437, 11, 9" Text="of" />
+                                      <uc:OcrTextInfo Region="853, 437, 17, 9" Text="the" />
+                                      <uc:OcrTextInfo Region="874, 437, 19, 9" Text="law." />
+                                      <uc:OcrTextInfo Region="898, 437, 12, 12" Text="By" />
+                                      <uc:OcrTextInfo Region="913, 437, 39, 12" Text="clidcing" />
+                                      <uc:OcrTextInfo Region="956, 437, 16, 9" Text="OK" />
+                                      <uc:OcrTextInfo Region="975, 440, 19, 9" Text="you" />
+                                      <uc:OcrTextInfo Region="998, 440, 30, 9" Text="agree" />
+                                      <uc:OcrTextInfo Region="1031, 440, 19, 9" Text="you" />
+                                      <uc:OcrTextInfo Region="1055, 437, 24, 9" Text="have" />
+                                      <uc:OcrTextInfo Region="1083, 437, 22, 9" Text="read" />
+                                      <uc:OcrTextInfo Region="1109, 437, 20, 9" Text="and" />
+                                      <uc:OcrTextInfo Region="1133, 437, 59, 9" Text="understand" />
+                                      <uc:OcrTextInfo Region="1196, 437, 19, 9" Text="this" />
+                                      <uc:OcrTextInfo Region="1218, 437, 42, 12" Text="warning" />
+                                      <uc:OcrTextInfo Region="670, 453, 19, 9" Text="and" />
+                                      <uc:OcrTextInfo Region="693, 453, 17, 9" Text="the" />
+                                      <uc:OcrTextInfo Region="714, 453, 44, 9" Text="inherent" />
+                                      <uc:OcrTextInfo Region="762, 453, 47, 9" Text="liabilities." />
+                                      <uc:OcrTextInfo Region="814, 453, 6, 9" Text="If" />
+                                      <uc:OcrTextInfo Region="823, 456, 19, 9" Text="you" />
+                                      <uc:OcrTextInfo Region="846, 456, 17, 6" Text="are" />
+                                      <uc:OcrTextInfo Region="867, 453, 48, 9" Text="uncertain" />
+                                      <uc:OcrTextInfo Region="919, 453, 31, 9" Text="about" />
+                                      <uc:OcrTextInfo Region="953, 456, 24, 9" Text="your" />
+                                      <uc:OcrTextInfo Region="980, 454, 31, 8" Text="status" />
+                                      <uc:OcrTextInfo Region="1015, 453, 51, 12" Text="regarding" />
+                                      <uc:OcrTextInfo Region="1070, 456, 33, 6" Text="access" />
+                                      <uc:OcrTextInfo Region="1106, 454, 11, 8" Text="to" />
+                                      <uc:OcrTextInfo Region="1121, 453, 19, 9" Text="this" />
+                                      <uc:OcrTextInfo Region="1143, 454, 36, 11" Text="system" />
+                                      <uc:OcrTextInfo Region="1184, 453, 33, 12" Text="please" />
+                                      <uc:OcrTextInfo Region="1220, 454, 39, 8" Text="contact" />
+                                      <uc:OcrTextInfo Region="670, 472, 6, 6" Text="a" />
+                                      <uc:OcrTextInfo Region="679, 469, 29, 9" Text="Wells" />
+                                      <uc:OcrTextInfo Region="712, 469, 57, 12" Text="Enterprises" />
+                                      <uc:OcrTextInfo Region="773, 469, 17, 9" Text="Inc" />
+                                      <uc:OcrTextInfo Region="794, 469, 48, 9" Text="Windows" />
+                                      <uc:OcrTextInfo Region="846, 469, 37, 12" Text="System" />
+                                      <uc:OcrTextInfo Region="888, 469, 48, 12" Text="Engineer." />
+                                      <uc:OcrTextInfo Region="803, 1001, 33, 16" Text="II" />
+                                      <uc:OcrTextInfo Region="872, 1007, 3, 3" Text="'" />
+                                      <uc:OcrTextInfo Region="803, 1018, 39, 16" Text="I.“" />
+                                      <uc:OcrTextInfo Region="846, 1006, 105, 22" Text="Windows" />
+                                      <uc:OcrTextInfo Region="958, 1007, 72, 21" Text="Server" />
+                                      <uc:OcrTextInfo Region="1034, 1007, 51, 21" Text="2012" />
+                                      <uc:OcrTextInfo Region="1091, 1007, 27, 20" Text="R2" />
+                                    </scg:List>
+                                  </uc:CVCache.OcrTexts>
+                                </uc:CVCache>
+                              </p:CVScope.DesignTimeCache>
+                              <p:CVScope.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Profile="None" />
+                                </ActivityFunc>
+                              </p:CVScope.OCREngine>
+                              <p:CVScope.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="17dca4b856835300f58f2731bc9042c1" Selector="&lt;wnd app='mstsc.exe' cls='TscShellContainerClass' title='*Remote Desktop Connection' /&gt;&lt;wnd cls='UIMainClass' title='* Remote Desktop Connection' /&gt;&lt;wnd cls='IHWindowClass' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </p:CVScope.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </p:CVScope>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Second access  screen not available.&quot;]" />
+                        </If.Else>
+                      </If>
+                      <Delay Duration="[new TimeSpan(0,0,1)]" sap:VirtualizedContainerService.HintSize="855,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application" sap:VirtualizedContainerService.HintSize="855,68" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+                        <ui:CloseApplication.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='*Remote Desktop Connection' /&gt;&lt;wnd cls='HwndWrapper*' title='Server Manager' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:CloseApplication.Target>
+                      </ui:CloseApplication>
+                    </Sequence>
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean">
+                <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'mstsc.exe PWV001DSI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="166f4ccd851f1fecd7441769934b1659" Selector="&lt;wnd app='mstsc.exe' cls='TscShellContainerClass' title='* Remote Desktop Connection' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+              </ActivityFunc>
+            </ui:RetryScope.Condition>
+          </ui:RetryScope>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1069,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Error while Logging to DSI Server&quot;+exception.Message]" />
+              <Throw Exception="[New SystemException(&quot;Could not Login to DSI Server.&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
